@@ -20,9 +20,13 @@ public class PokemonService {
     public List<Pokemon> listAll() {
         return (List<Pokemon>) repo.findAll();
     }
-    public Pokemon get(Long id) { return repo.findById(id).get();
+    public Pokemon get(Long id) {
+        return repo.findById(id).get();
     }
-    public void delete(Long id) { repo.deleteById(id); } public List<Pokemon> search(String keyword) {
+    public void delete(Long id) {
+        repo.deleteById(id);
+    }
+    public List<Pokemon> search(String keyword) {
         return repo.search(keyword);
     }
 }
